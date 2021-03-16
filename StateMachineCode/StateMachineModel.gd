@@ -33,7 +33,7 @@ func _update(current_state: String, target_obj, action_list: Array) -> String:
 		for tran in _transition_lookup[current_state]:
 			# If the action name matches the action for the transition
 			# and we don't have a guard or the guard passes
-			if tran.action_name == action_name && (tran.guard == null || tran.guard(target_obj, action)):
+			if tran.action_name == action_name && (tran.guard == null || tran.guard.call_func(target_obj, action)):
 				# If there's an action function, call it, if action isn't null, pop it from the list
 				# The action function will return true to consume the event, or false to leave it for the next state
 				if (tran.action != null && tran.action.call_func(target_obj, action)) && action != null:
