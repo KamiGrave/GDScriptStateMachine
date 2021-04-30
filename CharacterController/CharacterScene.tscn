@@ -85,17 +85,35 @@ position = Vector2( -640, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionShape2D"]
+polygon = PoolVector2Array( -60, -480, 60, -480, 60, 480, -60, 480 )
+vertex_colors = PoolColorArray( 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1 )
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 640, 480 )
 shape = SubResource( 2 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="StaticBody2D/CollisionShape2D2"]
+rotation = 1.5708
+polygon = PoolVector2Array( -60, -640, 60, -640, 60, 640, -60, 640 )
+vertex_colors = PoolColorArray( 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1280, 0 )
 shape = SubResource( 1 )
 
+[node name="Polygon2D2" type="Polygon2D" parent="StaticBody2D/CollisionShape2D3"]
+polygon = PoolVector2Array( -60, -480, 60, -480, 60, 480, -60, 480 )
+vertex_colors = PoolColorArray( 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1 )
+
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 640, -480 )
 shape = SubResource( 2 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="StaticBody2D/CollisionShape2D4"]
+rotation = 1.5708
+polygon = PoolVector2Array( -60, -640, 60, -640, 60, 640, -60, 640 )
+vertex_colors = PoolColorArray( 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1, 0.0862745, 0.129412, 0.811765, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2( 10, 10 )
@@ -118,3 +136,16 @@ anims/Hang = SubResource( 4 )
 anims/Idle = SubResource( 5 )
 anims/Jump = SubResource( 6 )
 anims/Walk = SubResource( 7 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -124.891
+margin_top = -408.032
+margin_right = 221.109
+margin_bottom = -339.032
+text = "Use the arrow keys to move and jump."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
