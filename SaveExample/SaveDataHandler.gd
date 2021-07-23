@@ -7,11 +7,13 @@ const num_slots := 2
 
 var save_data: SaveData
 
+# Opens and selects the slot
 func open_slot(slot_id):
   save_data = get_game_data(slot_id)
   save_data.name = "Slot " + str(slot_id+1)
   save_data.save()
-    
+
+# Returns the saved data for the particular slot
 func get_game_data(slot_id: int, create: bool = false) -> SaveData:
   var dir = Directory.new()
   var save_path = save_files[slot_id]
@@ -27,14 +29,17 @@ func get_game_data(slot_id: int, create: bool = false) -> SaveData:
             return new_save
   
   return null
-  
+
+# Updates the saved pressed button
 func set_button(button_id: int):
   save_data.button_pressed = button_id
   save_data.save()
   
+# Gets the button that's been pressed
 func get_button() -> int:
   return save_data.button_pressed
   
+# Replaces the slot with an empty save file
 func delete_slot(slot_id: int):
   var dir = Directory.new()
   var save_path = save_files[slot_id]
