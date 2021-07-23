@@ -19,6 +19,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://TrafficLight/Example.gd"
 }, {
+"base": "Resource",
+"class": "SaveData",
+"language": "GDScript",
+"path": "res://SaveExample/SaveData.gd"
+}, {
+"base": "Node",
+"class": "SaveDataHandler",
+"language": "GDScript",
+"path": "res://SaveExample/SaveDataHandler.gd"
+}, {
 "base": "Reference",
 "class": "StateAction",
 "language": "GDScript",
@@ -42,6 +52,8 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "CharacterStateMachineModel": "",
 "ExampleStateMachineModel": "",
+"SaveData": "",
+"SaveDataHandler": "",
 "StateAction": "",
 "StateMachineInstance": "",
 "StateMachineModel": "",
@@ -52,6 +64,10 @@ _global_script_class_icons={
 
 config/name="GDStateMachineExamples"
 config/icon="res://icon.png"
+
+[autoload]
+
+SaveDataAutoload="*res://SaveExample/SaveDataHandler.gd"
 
 [display]
 

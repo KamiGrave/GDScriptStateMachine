@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://SaveExample/BAUHS93.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://SaveExample/GameScene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GridContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "1"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+margin_left = 132.0
+margin_right = 260.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "2"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+margin_left = 264.0
+margin_right = 392.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "3"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+margin_top = 132.0
+margin_right = 128.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "4"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+margin_left = 132.0
+margin_top = 132.0
+margin_right = 260.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "5"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+margin_left = 264.0
+margin_top = 132.0
+margin_right = 392.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "6"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+margin_top = 264.0
+margin_right = 128.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "7"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+margin_left = 132.0
+margin_top = 264.0
+margin_right = 260.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "8"
+
+[node name="Button9" type="Button" parent="GridContainer"]
+margin_left = 264.0
+margin_top = 264.0
+margin_right = 392.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+text = "9"
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.45
+anchor_top = 0.8
+anchor_right = 0.55
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "Exit"
